@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+
+
+
+
+
+
+
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <title>Game Title</title>
+ <link href="style.css" rel="stylesheet" type="text/css" />
+ <style>
+   body{
+       background-image: url("TitleBgg.png");
+       width: 1920px;
+       height: 1080px;
+       color: rgb(185, 96, 185);
+       text-align: center;
+       font-family:  "Playfair Display", serif;
+       background-repeat: no-repeat;
+       }
+   button {
+       font-size: 30px;
+
+
+
+
+       font-family:  "Playfair Display", serif;
+   }
+   #button1 {
+       margin-top:50px;
+       margin-left: 460px;
+ 
+       height: 130px;
+       width: 900px;
+       padding: 15px 25px;
+       cursor: pointer;
+       outline: none;
+       text-align: center;
+       font-family:  "Playfair Display", serif;
+       font-size: 70px;
+       color: white;
+       background-color: #F7CFD6;
+       border: none;
+       border-radius: 15px;
+     
+           }  
+   #button2 {
+       margin-left: 460px;
+     
+       margin-top:23px;
+       height: 130px;
+       width: 900px;
+       padding: 15px 25px;
+       cursor: pointer;
+       outline: none;
+       font-size: 70px;
+       color: white;
+       text-align: center;
+       font-family:  "Playfair Display", serif;
+       background-color: #EB96AC;
+       border: none;
+       border-radius: 15px;
+           }
+   #button3 {
+       margin-left: 460px;
+       margin-top:23px;
+       height: 130px;
+       width: 900px;
+       font-size: 70px;
+       color: white;
+       padding: 15px 25px;
+       cursor: pointer;
+       outline: none;
+       text-align: center;
+       font-family:  "Playfair Display", serif;
+       background-color: #E1627B;
+       border: none;
+       border-radius: 15px;
+   
+           }  
+     
+       #TandT{
+       margin-left: 80px;
+       margin-top:-480px;
+       height: 400px;
+       width: 300px;
+       font-size: 70px;
+       color: white;
+       padding: 15px 25px;
+       cursor: pointer;
+       outline: none;
+       text-align: center;
+       font-family:  "Playfair Display", serif;
+       background-color: rgb(117, 46, 58);
+       border: none;
+       border-radius: 15px;
+       }
+
+
+
+
+       #DEVELOPERS{
+       margin-left: 1450px;
+       margin-top:-430px;
+       height: 400px;
+       width: 300px;
+       font-size: 45px;
+       color: white;
+       padding: 15px 25px;
+       cursor: pointer;
+       outline: none;
+       text-align: center;
+       font-family:  "Playfair Display", serif;
+       background-color: rgb(117, 46, 58);
+       border: none;
+       border-radius: 15px;
+       }
+
+
+
+
+   #button1:hover {
+       background-color: #635356;
+   }
+   #button2:hover {
+       background-color: #996E79;
+   }
+   #button3:hover {
+       background-color: #B6697A;
+   }
+   #TandT:hover {
+       background-color: #2F1217;
+   }
+   #DEVELOPERS:hover {
+       background-color: #2F1217;
+   }
+
+
+
+
+
+
+
+
+   .button:active {
+       box-shadow: 0 5px #666;
+       transform: translateY(4px);
+   }
+   #title{
+      margin-top: 20px;
+      font-size: 50px;
+       margin-left: -20px;
+   
+   }
+ </style>
+</head>
+
+
+
+
+
+
+
+
+<body>
+
+
+  <div onclick ="Warn()" class="button" id="title"> <img src="TitleTitle.svg" alt="TitleTitle"> </div>
+
+
+ <script src="script.js">startGame()</script>
+ <div>
+ <a href="maze2.html"><div onclick ="startGame1()" class="button" id="button1">LEVEL 1</div></a>
+</div>
+<div>
+   <a href="maze game.html"><div  onclick ="startGame2()" class="button" id="button2">LEVEL 2</div></a>
+</div>
+
+
+
+
+
+<div>
+   <a href="tipsandtricks.html"><div   class="button" id="TandT">TIPS AND TRICKS</div></a>
+</div>
+<div>
+   <a href="developers.html"><div  class="button" id="DEVELOPERS">ABOUT THE DEVELOPERS AND HOW TO PLAY</div></a>
+</div>
+ <script>
+
+
+ function Warn() {
+    alert('Warning: Contains Jumpscares!');
+ }
+ function startGame1() {
+   alert('Play Level 1?');
+
+
+
+
+}
+function startGame2() {
+   alert('Play Level 2?');
+}
+function startGame3() {
+   alert('Play Level 3?');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
