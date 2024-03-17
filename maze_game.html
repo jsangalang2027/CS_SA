@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>maze2</title>
+    <style>
+        #playPlace{
+            position:relative;
+            background-image: url("maze2-2.png");
+            border: 1px solid green;
+            height: 1080px;
+            width: 1920px;
+            z-index: 1;
+        }
+        body{
+            font-size: 30px;
+           cursor: crosshair;
+           z-index: 1;
+        }
+        #maze{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+        }
+        #startbutt{
+            padding: 5px;
+            background-color: pink;
+            color: deeppink;
+            width: 420px;
+            height: 110px;
+            position: fixed;
+            z-index: 3;
+        
+            margin-left: 740px;
+        }
+        #end{
+            padding: 5px;
+            background-color: pink;
+            color: deeppink;
+            width: 200px;
+            height: 180px;
+            position: fixed;
+            z-index: 3;
+            margin-top: 900px;
+            margin-left: 1340px;
+            cursor:pointer;
+        }
+        #jumpscare1{
+            width:1920px;
+            height: 1080px;
+            display:none;
+            z-index: 10000;
+            position: fixed ;
+        }
+        #jumpscare2{
+            width:1920px;
+            height: 1080px;
+            display:none;
+            z-index: 10000;
+            position: fixed ;
+        }
+        #jumpscare3{
+            width:1920px;
+            height: 1080px;
+            display:none;
+            z-index: 10000;
+            position: fixed ;
+        }
+        #jumpscare4{
+            width:1920px;
+            height: 1080px;
+            display:none;
+            z-index: 10000;
+            position: fixed ;
+        }
+        #scary1{
+            width:1920px;
+            height: 1080px;
+            display:none;
+            z-index: 10000;
+            position: fixed ;
+        }
+        #scary2{
+            width:1920px;
+            height: 1080px;
+            display:none;
+            z-index: 10000;
+            position: fixed ;
+        }
+        #anya{
+            opacity: 0;
+            width: 215px;
+            height: 227px;
+            position: absolute;
+            margin-top: 20px;
+            margin-left: 360px;
+            z-index:1000;
+            cursor:pointer;
+        }
+        #femboy{
+            opacity: 0;
+            width: 333px;
+            height: 364px;
+            position: absolute;
+            z-index:1000;
+            margin-top: 710px;
+            margin-left: 360px;
+            cursor:pointer;
+        }
+        #rem{
+            opacity: 0;
+            width: 224px;
+            height: 233px;
+            position: absolute;
+            z-index:1000;
+            margin-top: 330px;
+            margin-left: 1250px;
+            cursor:pointer;
+        }
+    </style>
+    <script>
+        function reloadPage(){
+            window.location.reload(); 
+        }
+        var startButt;
+        function showCoords(event){
+            var x = event.clientX;
+            var y = event.clientY;
+          
+            if (startButt=="start"){
+                if((x<1168 && x>750) && (y<115 && y>8)){
+                
+            }
+            else if((x<1441 && x>1167) && (y<85 && y>41)){
+                
+            }
+            else if((x<1442 && x>1405) && (y<316 && y>41)){
+                
+            }
+            else if((x<1406 && x>1167) && (y<318 && y>276)){
+                
+            }
+
+
+            else if((x<1168 && x>1128) && (y<502 && y>158)){
+                
+            }
+            else if((x<1274 && x>1128) && (y<502 && y>463)){
+                
+            }
+
+
+            else if((x<1168&& x>678) && (y<222 && y>158)){
+                
+            }
+            else if((x<715 && x>678) && (y<372 && y>156)){
+                
+            }
+            else if((x<1101 && x>446) && (y<370 && y>339)){
+                
+            }
+            else if((x<477 && x>446) && (y<370 && y>248)){
+                
+            }
+
+
+            else if((x<1105 && x>916) && (y<517 && y>339)){
+                
+            }
+            else if((x<918 && x>521) && (y<918 && y>431)){
+                
+            }
+            else if((x<494 && x>725) && (y<577 && y>431)){
+                
+            }
+            else if((x<1105 && x>1049) && (y<724 && y>510)){
+                
+            }
+            else if((x<1377 && x>1049) && (y<724 && y>682)){
+                
+            }
+            else if((x<1377 && x>1354) && (y<825 && y>682)){
+                
+            }
+
+
+            else if((x<1377 && x>867) && (y<827 && y>799)){
+                
+            }
+            else if((x<890 && x>869) && (y<980 && y>799)){
+                
+            }
+            else if((x<1293 && x>869) && (y<983 && y>954)){
+                
+            }
+            else if((x<1544 && x>1355) && (y<1086 && y>907)){
+                
+            }
+            else if((x<595 && x>380) && (y<250 && y>23)){
+                
+            }
+            else if((x<713 && x>380) && (y<1079 && y>715)){
+                
+            }
+            else if((x<1493 && x>1269) && (y<574 && y>341)){
+                
+            }
+           
+
+         
+
+
+
+else{
+    play()
+    var randNum=Math.random();
+    if(randNum<=0.25){
+        showJumpscare(event)
+        setTimeout(reloadPage,2000)
+    }
+    if(randNum>0.25&&randNum<=0.5){
+        showJumpscare1(event)
+        setTimeout(reloadPage,2000)
+    }
+    if(randNum>0.5&&randNum<=0.75){
+        showJumpscare2(event)
+        setTimeout(reloadPage,2000)
+    }
+    if(randNum>0.75&&randNum<=1){
+        showJumpscare(event)
+        setTimeout(reloadPage,2000)
+    }
+
+} 
+
+        }
+            }
+      
+        function startButt(){
+            startButt="start";
+            play()
+        }
+        function clearXY(){
+            document.getElementById("myCoords").innerHTML="X, Y: "
+        }
+        var myMusic;
+
+function startGame() {
+  myMusic = new sound("bgmusic.mp3");
+  myMusic.play();
+  myGameArea.start();
+ 
+}
+
+function play(){
+    document.getElementById("bgmusic");
+    document.getElementById("scare1");
+    document.getElementById("scare4");
+    document.getElementById("scare2");
+    document.getElementById("scare3");
+
+}
+
+
+function showJumpscare(event){
+    document.getElementById('bgmusic').pause();
+    document.getElementById("scare1").play();
+    document.getElementById("jumpscare1").style.display="block";
+
+}
+function showJumpscare1(event){
+    document.getElementById('bgmusic').pause();
+    document.getElementById("scare2").play();
+    document.getElementById("jumpscare2").style.display="block";
+
+}
+function showJumpscare2(event){
+    document.getElementById('bgmusic').pause();
+    document.getElementById("scare3").play();
+    document.getElementById("jumpscare3").style.display="block";
+
+}
+function showJumpscare3(event){
+    document.getElementById('bgmusic').pause();
+    document.getElementById("scare4").play();
+    document.getElementById("jumpscare4").style.display="block";
+
+}
+function showJumpscare4(event){
+    document.getElementById('bgmusic').pause();
+    document.getElementById("scare4").play();
+    document.getElementById("scary1").style.display="block";
+
+}
+function showJumpscare5(event){
+    document.getElementById('bgmusic').pause();
+    document.getElementById("scare4").play();
+    document.getElementById("scary2").style.display="block";
+
+}
+
+function scariest(){
+   play()
+   document.getElementById('bgmusic').pause();
+    showJumpscare3(event)
+        setTimeout(reloadPage,2000)
+}
+function scary1(){
+    play()
+   document.getElementById('bgmusic').pause();
+    showJumpscare4(event)
+        setTimeout(reloadPage,2000)
+}
+function scary2(){
+    play()
+   document.getElementById('bgmusic').pause();
+    showJumpscare5(event)
+        setTimeout(reloadPage,2000)
+
+}
+function endPage(){
+        if(startButt=="start"){
+            window.location.href="level1FINISHED.html"
+        }
+    }
+    </script>
+</head>
+<body>
+    <button onclick="startButt(); document.getElementById('bgmusic').play(); " id="startbutt" >!START!</button>
+    <audio autoplay loop id="bgmusic" src="bgmusic.mp3" preload="auto" ></audio>
+
+    <audio autoplay loop id="scare1" src="scare1.MP3" preload="auto" ></audio>
+    <img src = "jumpscare1.png" id ="jumpscare1" alt="jump1">
+    <audio autoplay loop id="scare2" src="scare2.MP3" preload="auto" ></audio>
+    <img src = "jumpscare2.png" id ="jumpscare2" alt="jump2">
+    <audio autoplay loop id="scare3" src="scare1.MP3" preload="auto" ></audio>
+    <img src = "jumpscare3.png" id ="jumpscare3" alt="jump3">
+    <audio autoplay loop id="scare4" src="scare2.MP3" preload="auto" ></audio>
+    <img src = "jumpscare4.png" id ="jumpscare4" alt="jump4">
+    <audio autoplay loop id="scare4" src="scare2.MP3" preload="auto" ></audio>
+    <img src = "scary1.png" id ="scary1" alt="jump5">
+    <audio autoplay loop id="scare4" src="scare1.MP3" preload="auto" ></audio>
+    <img src = "scary2.png" id ="scary2" alt="jump6">
+    
+
+    <button id="anya" onclick="scariest()"></button>
+    <button id="rem" onclick="scary1()"></button>
+    <button id="femboy" onclick="scary2()"></button>
+
+    <a href="level2FINISHED.html"><button id="end">END</button></a>
+    
+    <button id="end" onclick="endPage()">END</button>
+    
+
+    <div id="playPlace" onmouseover="showCoords(event)" onmouseout="" onmousemove="showCoords(event)"></div>
+    <p id="myCoords"></p>
+</body>
+</html>
