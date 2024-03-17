@@ -121,13 +121,14 @@
     function reloadPage(){
            window.location.reload();
        }
+       var startButton="";
+
       function showCoords(event){
           var x = event.clientX;
           var y = event.clientY;
 
 
-       
-          if (startButt=="start"){
+        if (startButton=="start") {
        
           if((x<826 && x>9) && (y<929 && y>762)){
            
@@ -144,57 +145,14 @@
           else if((x<1928 && x>1197) && (y<829 && y>698)){
            
           }
-          else if((x<429 && x>321) && (y<766 && y>430)){
-           
-          }
-          else if((x<429 && x>38) && (y<674 && y>568)){
-           
-          }
-          else if((x<98 && x>34) && (y<668 && y>198)){
-           
-          }
-          else if((x<1773 && x>1678) && (y<474 && y>194)){
-           
-          }
-          else if((x<678 && x>122) && (y<386 && y>317)){
-           
-          }
-          else if((x<234 && x>121) && (y<532 && y>321)){
-           
-          }
-
-
-          else if((x<1770 && x>38) && (y<285 && y>194)){
-           
-          }
-         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
-
-
-
-
-
-
-
-
+          else if((x<429 && x>321) && (y<766 && y>430)){}
+          else if((x<429 && x>38) && (y<674 && y>568)){}
+          else if((x<98 && x>34) && (y<668 && y>198)){}
+          else if((x<1773 && x>1678) && (y<474 && y>194)){}
+          else if((x<678 && x>122) && (y<386 && y>317)){}
+          else if((x<234 && x>121) && (y<532 && y>321)){}
+          else if((x<1770 && x>38) && (y<285 && y>194)){}
 else{
-   play()
    var randNum=Math.random();
    if(randNum<=0.25){
        showJumpscare(event)
@@ -212,387 +170,96 @@ else{
        showJumpscare(event)
        setTimeout(reloadPage,2000)
    }
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
        }
            }
-   
-       function startButt(){
-           startButt="start";
-           play()
-       }
        function clearXY(){
            document.getElementById("myCoords").innerHTML="X, Y: "
        }
-       var myMusic;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function startGame() {
-myMusic = new sound("bgmusic.mp3");
-myMusic.play();
-myGameArea.start();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function startButt(){
-   startButt="start";
-   play()
+   startButton="start";
+   document.getElementById('bgmusic').play()
 }
 function clearXY(){
    document.getElementById("myCoords").innerHTML="X, Y: "
 }
-var myMusic;
-
-
-
-
-
-
-
-
-function startGame() {
-myMusic = new sound("bgmusic.mp3");
-myMusic.play();
-myGameArea.start();
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-function play(){
-document.getElementById("bgmusic");
-
-
-
-
-
-
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function showJumpscare(event){
 document.getElementById('bgmusic').pause();
 document.getElementById("scare1").play();
 document.getElementById("jumpscare1").style.display="block";
-
-
-
-
-
-
-
-
 }
 function showJumpscare1(event){
 document.getElementById('bgmusic').pause();
 document.getElementById("scare2").play();
 document.getElementById("jumpscare2").style.display="block";
-
-
-
-
-
-
-
-
 }
 function showJumpscare2(event){
 document.getElementById('bgmusic').pause();
 document.getElementById("scare3").play();
 document.getElementById("jumpscare3").style.display="block";
-
-
-
-
-
-
-
-
 }
 function showJumpscare3(event){
 document.getElementById('bgmusic').pause();
 document.getElementById("scare4").play();
 document.getElementById("jumpscare4").style.display="block";
-
-
-
-
-
-
-
-
 }
 function showJumpscare4(event){
 document.getElementById('bgmusic').pause();
 document.getElementById("scare4").play();
 document.getElementById("scary1").style.display="block";
-
-
-
-
-
-
-
-
 }
 function showJumpscare5(event){
 document.getElementById('bgmusic').pause();
 document.getElementById("scare4").play();
 document.getElementById("scary2").style.display="block";
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
-
-
 function scariest(){
-play()
 document.getElementById('bgmusic').pause();
 showJumpscare3(event)
 setTimeout(reloadPage,2000)
 }
 function scary1(){
-play()
 document.getElementById('bgmusic').pause();
 showJumpscare4(event)
 setTimeout(reloadPage,2000)
 }
 function scary2(){
-play()
 document.getElementById('bgmusic').pause();
 showJumpscare5(event)
 setTimeout(reloadPage,2000)
 
 
 
-
-
-
-
-
 }
 function endPage(){
-   if(startButt=="start"){
+   if(startButton=="start"){
        window.location.href="level1FINISHED.html"
    }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   </script>
 </head>
 <body>
-   <button onclick="startButt(); document.getElementById('bgmusic').play(); " id="startbutt" >!START!</button>
-   <audio autoplay loop id="bgmusic" src="bgmusic.mp3" preload="auto" ></audio>
-
-
-
-
-
-
-
-
-   <audio autoplay loop id="scare1" src="scare1.MP3" preload="auto" ></audio>
+   <button onclick="startButt()" id="startbutt" >!START!</button>
+   <audio     id="bgmusic" src="bgmusic.mp3"></audio>
+   <audio     id="scare1" src="scare1.MP3"></audio>
    <img src = "jumpscare1.png" alt ="jumpscare1" id ="jumpscare1">
-   <audio autoplay loop id="scare2" src="scare2.MP3" preload="auto" ></audio>
+   <audio     id="scare2" src="scare2.MP3"   ></audio>
    <img src = "jumpscare2.png" alt ="jumpscare2" id ="jumpscare2">
-   <audio autoplay loop id="scare3" src="scare1.MP3" preload="auto" ></audio>
+   <audio     id="scare3" src="scare1.MP3"   ></audio>
    <img src = "jumpscare3.png" alt ="jumpscare3" id ="jumpscare3">
-   <audio autoplay loop id="scare4" src="scare2.MP3" preload="auto" ></audio>
+   <audio     id="scare4" src="scare2.MP3"   ></audio>
    <img src = "jumpscare4.png" alt ="jumpscare4" id ="jumpscare4">
-   <audio autoplay loop id="scare5" src="scare2.MP3" preload="auto" ></audio>
+   <audio     id="scare5" src="scare2.MP3"   ></audio>
    <img src = "scary1.png" alt ="scary1" id ="scary1">
-   <audio autoplay loop id="scare6" src="scare1.MP3" preload="auto" ></audio>
+   <audio     id="scare6" src="scare1.MP3"   ></audio>
    <img src = "scary2.png" alt="scary2" id ="scary2">
- 
-
-
-
-
-
-
-
-
    <button id="anya" onclick="scariest()"></button>
    <button id="rem" onclick="scary1()"></button>
    <button id="femboy" onclick="scary2()"></button>
-
-
-
-
-
-
-
-
    <button id="end" onclick="endPage()">END</button>
-
-
-
-
-
-
-
-
    <div id="playPlace" onmouseover="showCoords(event)" onmouseout="" onmousemove="showCoords(event)"></div>
    <p id="myCoords"></p>
 </body>
