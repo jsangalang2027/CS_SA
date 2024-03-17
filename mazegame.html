@@ -124,8 +124,11 @@
       function showCoords(event){
           var x = event.clientX;
           var y = event.clientY;
-          document.getElementById("myCoords").innerHTML="X, Y: " + x + ", " + y;
+
+
+       
           if (startButt=="start"){
+       
           if((x<826 && x>9) && (y<929 && y>762)){
            
           }
@@ -161,6 +164,20 @@
           }
 
 
+          else if((x<1770 && x>38) && (y<285 && y>194)){
+           
+          }
+         
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -168,6 +185,10 @@
 
 
      
+
+
+
+
 
 
 
@@ -195,7 +216,15 @@ else{
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -227,11 +256,43 @@ else{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function startGame() {
 myMusic = new sound("bgmusic.mp3");
 myMusic.play();
 myGameArea.start();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -260,6 +321,10 @@ var myMusic;
 
 
 
+
+
+
+
 function startGame() {
 myMusic = new sound("bgmusic.mp3");
 myMusic.play();
@@ -268,7 +333,15 @@ myGameArea.start();
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -283,7 +356,19 @@ document.getElementById("scare3");
 
 
 
+
+
+
+
 }
+
+
+
+
+
+
+
+
 
 
 
@@ -300,11 +385,19 @@ document.getElementById("jumpscare1").style.display="block";
 
 
 
+
+
+
+
 }
 function showJumpscare1(event){
 document.getElementById('bgmusic').pause();
 document.getElementById("scare2").play();
 document.getElementById("jumpscare2").style.display="block";
+
+
+
+
 
 
 
@@ -318,11 +411,19 @@ document.getElementById("jumpscare3").style.display="block";
 
 
 
+
+
+
+
 }
 function showJumpscare3(event){
 document.getElementById('bgmusic').pause();
 document.getElementById("scare4").play();
 document.getElementById("jumpscare4").style.display="block";
+
+
+
+
 
 
 
@@ -336,6 +437,10 @@ document.getElementById("scary1").style.display="block";
 
 
 
+
+
+
+
 }
 function showJumpscare5(event){
 document.getElementById('bgmusic').pause();
@@ -345,7 +450,15 @@ document.getElementById("scary2").style.display="block";
 
 
 
+
+
+
+
 }
+
+
+
+
 
 
 
@@ -367,6 +480,10 @@ play()
 document.getElementById('bgmusic').pause();
 showJumpscare5(event)
 setTimeout(reloadPage,2000)
+
+
+
+
 
 
 
@@ -401,11 +518,39 @@ function endPage(){
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </script>
 </head>
 <body>
    <button onclick="startButt(); document.getElementById('bgmusic').play(); " id="startbutt" >!START!</button>
    <audio autoplay loop id="bgmusic" src="bgmusic.mp3" preload="auto" ></audio>
+
+
+
+
 
 
 
@@ -427,9 +572,17 @@ function endPage(){
 
 
 
+
+
+
+
    <button id="anya" onclick="scariest()"></button>
    <button id="rem" onclick="scary1()"></button>
    <button id="femboy" onclick="scary2()"></button>
+
+
+
+
 
 
 
@@ -439,11 +592,11 @@ function endPage(){
 
 
 
+
+
+
+
    <div id="playPlace" onmouseover="showCoords(event)" onmouseout="" onmousemove="showCoords(event)"></div>
    <p id="myCoords"></p>
 </body>
 </html>
-
-
-
-
