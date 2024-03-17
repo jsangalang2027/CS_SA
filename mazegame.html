@@ -116,6 +116,12 @@
            cursor:pointer;
            opacity:0;
        }
+      #return{
+            font-size: 70px;
+            z-index: 100000000;
+            
+
+        }
   </style>
   <script>
     function reloadPage(){
@@ -262,5 +268,6 @@ function endPage(){
    <button id="end" onclick="endPage()">END</button>
    <div id="playPlace" onmouseover="showCoords(event)" onmouseout="" onmousemove="showCoords(event)"></div>
    <p id="myCoords"></p>
+   <a href="index.html"> <button id="return">⏎ </button> </a>
 </body>
 </html>
